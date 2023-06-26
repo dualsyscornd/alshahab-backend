@@ -1,8 +1,8 @@
 const express = require("express");
 const db = require("../../Config/db");
 
-exports.AttributesFetch = (req, res) => {
-  db.query("SELECT * FROM attributes", (err, data) => {
+exports.Products__categoriesFetch = (req, res) => {
+  db.query("SELECT * FROM products__categories", (err, data) => {
     if (err) {
       return res.json({
         success: false,

@@ -1,8 +1,8 @@
 const express = require("express");
 const db = require("../../Config/db");
 
-exports.AttributesFetch = (req, res) => {
-  db.query("SELECT * FROM attributes", (err, data) => {
+exports.Home__slidersFetch = (req, res) => {
+  db.query("SELECT * FROM home__sliders", (err, data) => {
     if (err) {
       return res.json({
         success: false,
