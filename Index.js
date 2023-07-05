@@ -15,6 +15,7 @@ const DiscountsRouter = require("./Routers/Discounts");
 const Home__slidersRouter = require("./Routers/Home__sliders");
 const Products__attributesRouter = require("./Routers/Products__attributes");
 const ProductsRouter = require("./Routers/Products");
+const CustomerRouter = require("./Routers/CustomerRouter");
 
 if (process.env.ENABLE_CORS) {
   app.use(cors());
@@ -27,7 +28,8 @@ app.use("/discounts", DiscountsRouter);
 app.use("/Home__sliders", Home__slidersRouter);
 app.use("/Products__attributes", Products__attributesRouter);
 app.use("/Products", ProductsRouter);
+app.use("/Customers", CustomerRouter);
 
 app.listen(process.env.PORT, () => {
-  console.log(`Al-shahab api listening on port ${process.env.PORT}`);       
+  console.log(`Al-shahab api listening on port ${process.env.PORT}`);
 });
